@@ -1,12 +1,28 @@
 $maincolor: #2A363B;
+$redcolor: #E84A5F;
+$formcolor: rgba(238, 238, 238, 0.7);
 body {
   margin: 0;
 }
 
+h1{
+  position: relative;
+  margin: 0 0 15px 0;
+font-family: Noto Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+line-height: 44px;
+text-align: center;
+color: $redcolor;
+}
+
 header {
 position: absolute;
-width: 1920px;
+width: 100%;
 height: 64px;
+display: flex;
+justify-content: flex-end;
 background: $maincolor;
 }
 
@@ -18,4 +34,119 @@ height: 48px;
 }
 .logo {
   height: 100%;
+}
+.modal {
+  display: none;
+  position: fixed;
+  margin-top: 64px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+.modal-content{
+  padding:5px 5px ;
+  margin: 150px auto ;
+  width: 465.79px;
+  height: 550px;
+  background-color: $maincolor;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  border: 1px solid $maincolor;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.close {
+  color: #aaa;
+  float: right;
+  background: $maincolor;
+  border: none;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+.login_btn {
+  background-color: $maincolor;
+  border-style: none;
+  height: 64px;
+  outline: none;
+  cursor: pointer;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #fff;
+  margin-right: 80px;
+}
+.login_btn:hover {
+  color: $redcolor;
+}
+.close:hover {
+  color: $redcolor;
+}
+
+.X {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.m_l {
+  width:150px;
+}
+
+.modal_input {
+  width: 350px;
+  height: 39px;
+  border: 1px solid $formcolor;
+  border-radius: 4px;
+  margin-top: 20px;
+  display: flex;
+  aling-items: center;
+}
+.fas {
+  margin-top: 6px;
+  margin-left:6px;
+  color: white;
+  font-size: 25px;
+}
+.in {
+  width: 100%;
+  margin: 5px 0 5px 10px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid $formcolor;
+
+  input {
+    width: 100%;
+    color: $formcolor;
+    background: $maincolor;
+    border: none;
+    outline: none;
+  }
+  input:focus {
+    .modal_input {
+    border-color: $redcolor;
+    }
+  }
+}
+.forgot_pa {
+  margin-top: 3px;
+  width: 350px;
+  padding-right: 0;
+  font-size: 12px;
+  height: 20px;
+  text-align: right;
+  button {
+    padding-right: 0;
+    background: $maincolor;
+    outline: none;
+    border: none;
+    color: $formcolor;
+  }
+  button:hover {
+    color: $redcolor;
+  }
 }

@@ -5,12 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="/dist/app.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <title>Webpack</title>
 </head>
+<body>
+  <script src="./src/js/bord.js"></script>
   <header>
+    <button id="myBtn" class="login_btn">LOGIN</button>
+  </header>
   <div class="top_logo">
     <img class="logo" src="/src/images/logo_text.png"></img>
   </div>
-  </header>
+
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <div class="X">
+        <button  class="close">X</button>
+      </div>
+      <h1>Forgot password</h1>
+    </div>
+
+
+  </div>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="X">
+        <button class="close">X</button>
+      </div>
+      <img class="m_l"  src="/src/images/main_logo.svg">
+      <h1>LOGIN</h1>
+      <div class="modal_input" id="mail">
+        <i class="fas fa-user"></i>
+        <div class="in">
+          <input  type="text" placeholder="Email" onchange=(oldBorderMail()) onfocus=(changeBorderMail())>
+        </div>
+      </div>
+      <div class="modal_input" id="password">
+        <i class="fas fa-lock"></i>
+        <div class="in">
+          <input  type="text" placeholder="Password" onchange=(oldBorderPass()) onfocus=(changeBorderPass())>
+        </div>
+      </div>
+      <div class="forgot_pa">
+        <button id="forgotBtn" >Forgot password?</button>
+      </div>
+      <div class="lower">
+        <button id="main_login">
+      </div>
+    </div>
+  </div>
+  <script src="./dist/app.js"></script>
+
 </body>
 </html>
