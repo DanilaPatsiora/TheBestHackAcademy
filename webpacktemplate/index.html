@@ -38,20 +38,25 @@
       <div class="modal_input" id="mail">
         <i class="fas fa-user"></i>
         <div class="in">
-          <input  type="text" placeholder="Email" onchange=(oldBorderMail()) onfocus=(changeBorderMail())>
+          <input id="mail_input" type="text" placeholder="Email"  onfocusout=(oldBorderMail()) onfocus=(changeBorderMail())>
         </div>
       </div>
       <div class="modal_input" id="password">
         <i class="fas fa-lock"></i>
         <div class="in">
-          <input  type="text" placeholder="Password" onchange=(oldBorderPass()) onfocus=(changeBorderPass())>
+          <input id="password_input" type="password" placeholder="Password" onfocusout=(oldBorderPass()) onfocus=(changeBorderPass())>
         </div>
       </div>
       <div class="forgot_pa">
         <button id="forgotBtn" >Forgot password?</button>
       </div>
       <div class="lower">
-        <button id="main_login">
+        <button id="main_login">LOGIN</button>
+      </div>
+      <div class="under_button">
+      <div class="line"> <hr noshade ></div>
+        <p>OR</p>
+      <div class="line"> <hr noshade ></div>
       </div>
     </div>
   </div>
