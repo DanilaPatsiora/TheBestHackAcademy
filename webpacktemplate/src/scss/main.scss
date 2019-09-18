@@ -1,0 +1,21 @@
+$maincolor: #2A363B;
+body {
+  margin: 0;
+}
+
+header {
+position: absolute;
+width: 1920px;
+height: 64px;
+background: $maincolor;
+}
+
+.top_logo{
+top: 8px;
+position: absolute;
+width: 310px;
+height: 48px;
+}
+.logo {
+  height: 100%;
+}
