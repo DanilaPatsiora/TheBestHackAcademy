@@ -2,6 +2,7 @@ $maincolor: #2A363B;
 $redcolor: #E84A5F;
 $formcolor: rgba(238, 238, 238, 0.2);
 $whitetext: #eee;
+$font: Noto Sans;
 body {
   margin: 0;
 }
@@ -9,7 +10,7 @@ body {
 h1{
   position: relative;
   margin: 0 0 15px 0;
-font-family: Noto Sans;
+font-family: $font;
 font-style: normal;
 font-weight: bold;
 font-size: 32px;
@@ -47,9 +48,9 @@ height: 48px;
 }
 .modal-content{
   padding:5px 5px ;
-  margin: 150px auto ;
+  margin: 100px auto ;
   width: 465.79px;
-  height: 550px;
+  height: 650px;
   background-color: $maincolor;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
@@ -102,27 +103,29 @@ height: 48px;
   height: 39px;
   border: 1px solid $formcolor;
   border-radius: 4px;
-  margin-top: 20px;
+  margin-top: 23px;
   display: flex;
   aling-items: center;
 }
 .fas {
-  margin-top: 6px;
-  margin-left:6px;
+  margin-top: 8px;
+  margin-left:8px;
   color: white;
-  font-size: 25px;
+  font-size: 22px;
 }
 .in {
   width: 100%;
-  margin: 5px 0 5px 10px;
+  margin: 5px 0 5px 8px;
   padding-left: 10px;
   display: flex;
   align-items: center;
   border-left: 1px solid $formcolor;
+  font-family: $font;
 
   input {
     width: 100%;
-    color: $formcolor;
+    font-family: $font;
+    color: $whitetext;
     background: $maincolor;
     border: none;
     outline: none;
@@ -141,6 +144,7 @@ height: 48px;
   height: 20px;
   text-align: right;
   button {
+    font-family: $font;
     padding-right: 0;
     background: $maincolor;
     outline: none;
@@ -156,9 +160,10 @@ height: 48px;
 .lower {
   width: 350px;
 
-  margin-top: 15px;
+  margin-top: 60px;
   button {
     width: 100%;
+    font-family: $font;
     height: 40px;
     background: $redcolor;
     opacity: 0.2;
@@ -167,10 +172,12 @@ height: 48px;
     color:  $whitetext;
     font-size: 20px;
     cursor: pointer;
+    outline: none;
   }
 }
 .under_button {
-  margin-top: 20px;
+  margin-top: 25px;
+  margin-bottom: 15px;
   width: 350px;
   display: flex;
   justify-content: space-between;
@@ -179,7 +186,7 @@ height: 48px;
     font-size: 22px;
     color: $whitetext;
     margin: 0 10px ;
-    font-family: Noto Sans;
+    font-family: $font;
   }
 }
 .line {
@@ -189,5 +196,68 @@ height: 48px;
   hr {
     border: 1px solid;
     border-color: $formcolor;
+  }
+}
+
+.signup {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  margin-top: 10px;
+  color: $whitetext;
+  p {
+    font-size: 14px;
+    font-family: $font;
+  }
+  button {
+    font-family: $font;
+    background: $maincolor;
+    color: $redcolor;
+    border-style: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
+.sign_up_icons {
+  margin-top: 0;
+  height: 40px;
+  width: 350px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.sign_up_net_btn {
+  margin-top: 0;
+  font-size: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: $whitetext;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.sign_up_net_btn:hover {
+  .fab {
+    color: $redcolor;
+  }
+}
+.help {
+  color: $redcolor;
+  display: none;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+.pass {
+  display: none;
+  justify-content: center;
+  width: 350px;
+  p {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 14px;
+    font-family: $font;
+    color: $redcolor;
   }
 }

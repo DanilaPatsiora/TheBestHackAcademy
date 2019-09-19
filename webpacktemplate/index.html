@@ -25,9 +25,19 @@
       </div>
       <h1>Forgot password</h1>
     </div>
-
-
   </div>
+
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <div class="X">
+        <button  class="close">X</button>
+      </div>
+      <h1>SignUP</h1>
+    </div>
+  </div>
+
+
   <div id="myModal" class="modal">
     <div class="modal-content">
       <div class="X">
@@ -35,6 +45,7 @@
       </div>
       <img class="m_l"  src="/src/images/main_logo.svg">
       <h1>LOGIN</h1>
+      <p id="mail_help" class="help">Email is incorrect</p>
       <div class="modal_input" id="mail">
         <i class="fas fa-user"></i>
         <div class="in">
@@ -50,13 +61,25 @@
       <div class="forgot_pa">
         <button id="forgotBtn" >Forgot password?</button>
       </div>
-      <div class="lower">
-        <button id="main_login">LOGIN</button>
+      <div class="pass" id="password_help">
+      <p>Password must contain at least 8 character, including UPPER/lowercase, special symbol and numbers</p>
+      </div>
+      <div class="lower" id="LOGIN_BUTTON">
+        <button id="main_login" disabled>LOGIN</button>
+      </div>
+      <div class="signup">
+        <p>Do not have an account?</p>
+        <button id="sign_up_button_action">SIGNUP</button>
       </div>
       <div class="under_button">
       <div class="line"> <hr noshade ></div>
         <p>OR</p>
       <div class="line"> <hr noshade ></div>
+      </div>
+      <div class="sign_up_icons">
+        <button class="sign_up_net_btn"><i class="fab fa-google"></i></button>
+        <button class="sign_up_net_btn"><i class="fab fa-facebook"></i></button>
+        <button class="sign_up_net_btn"><i class="fab fa-github"></i></button>
       </div>
     </div>
   </div>
