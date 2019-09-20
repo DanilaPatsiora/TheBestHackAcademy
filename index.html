@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <title>Webpack</title>
   <script src="bundle.js"></script>
 </head>
+
 <body>
   <header>
     <button onclick=(top_login_btn()) class="top_login_btn">LOGIN</button>
@@ -19,9 +21,9 @@
   <div id="mainModal" class="modal">
     <div id="main_content" class="modal-content">
       <div class="modal-content-X">
-        <button  onclick=(cross_main()) class="modal-content-X-close">X</button>
+        <button onclick=(cross_main()) class="modal-content-X-close">X</button>
       </div>
-      <img class="modal-content-main_logo"  src="/src/images/main_logo.svg">
+      <img class="modal-content-main_logo" src="/src/images/main_logo.svg">
       <h1>LOGIN</h1>
       <p id="mail_help" class="modal-content-help">Email is incorrect</p>
       <div class="modal-content-input" id="mail_border">
@@ -37,23 +39,27 @@
         </div>
       </div>
       <div class="modal-content-forgot_password">
-        <button onclick=(forgot_btn()) >Forgot password?</button>
+        <button onclick=(forgot_btn())>Forgot password?</button>
       </div>
 
       <div class="modal-content-password_requirements" id="password_help">
-      <p>Password must contain at least 8 character, including UPPER/lowercase, special symbol and numbers</p>
+        <p>Password must contain at least 8 character, including UPPER/lowercase, special symbol and numbers</p>
       </div>
       <div class="modal-content-main_login_btn" id="login_box">
-        <button onclick=(console.log(13)) disabled>LOGIN</button>
+        <button id="main_login" onclick=(console.log(13)) disabled>LOGIN</button>
       </div>
       <div class="modal-content-sign_up">
         <p>Do not have an account?</p>
         <button onclick=(sign_up_btn())>SIGNUP</button>
       </div>
       <div class="modal-content-under_button">
-        <div class="modal-content-under_button-line"> <hr noshade ></div>
-          <p>OR</p>
-        <div class="modal-content-under_button-line"> <hr noshade ></div>
+        <div class="modal-content-under_button-line">
+          <hr noshade>
+        </div>
+        <p>OR</p>
+        <div class="modal-content-under_button-line">
+          <hr noshade>
+        </div>
       </div>
       <div class="modal-content-sign_up_icons">
         <button class="modal-content-sign_up_icons-net_btn"><i class="fab fa-google"></i></button>
@@ -66,16 +72,34 @@
       <div class="modal-forgot-content-X">
         <button onclick=(cross_forgot()) class="modal-content-X-close">X</button>
       </div>
-      <h1>Forgot password</h1>
+      <img class="modal-forgot-content-main_logo" src="/src/images/main_logo.svg">
+      <h1>FORGOT PASSWORD</h1>
+      <p id="mail_help_sign_up" class="modal-sign_up-content-help">Email is incorrect</p>
+      <div class="modal-forgot-content-input" id="mail_border-forgot">
+        <i class="fas fa-user"></i>
+        <div class="modal-forgot-content-input-in">
+          <input id="mail_input_forgot" type="text" placeholder="Email" onkeyup=(buttonOn()) onfocusout=(freeBorderMail()) onfocus=(redBorderMail())>
+        </div>
+      </div>
+      <div class="modal-forgot-content-main_login_btn modal-forgot-content-main_login_btn-forgot" id="login_box">
+        <button onclick=(console.log(13)) disabled>Reset Password</button>
+      </div>
+      <div class="modal-forgot-content-sign_up">
+        <p>Do not have an account?</p>
+        <button onclick=(sign_up_btn())>SIGNUP</button>
+      </div>
     </div>
 
     <div id="sign_up_content" class="modal-sign_up-content">
       <div class="modal-sign_up-content-X">
         <button onclick=(cross_sign_up()) class="modal-content-X-close">X</button>
       </div>
-      <h1>SignUP</h1>
+      <img class="modal-sign_up-content-main_logo" src="/src/images/main_logo.svg">
+      <h1>CREATE YOUR ACCOUNT</h1>
+
     </div>
 
   </div>
 </body>
+
 </html>
