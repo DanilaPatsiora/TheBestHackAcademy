@@ -10,16 +10,16 @@
 </head>
 <body>
   <header>
-    <button id="top_login" onclick=(top_login_btn()) class="top_login_btn">LOGIN</button>
+    <button onclick=(top_login_btn()) class="top_login_btn">LOGIN</button>
   </header>
   <div class="top">
     <img class="top-logo" src="/src/images/logo_text.png"></img>
   </div>
 
   <div id="mainModal" class="modal">
-    <div class="modal-content">
+    <div id="main_content" class="modal-content">
       <div class="modal-content-X">
-        <button id="cross_main" class="modal-content-X-close">X</button>
+        <button  onclick=(cross_main()) class="modal-content-X-close">X</button>
       </div>
       <img class="modal-content-main_logo"  src="/src/images/main_logo.svg">
       <h1>LOGIN</h1>
@@ -27,28 +27,28 @@
       <div class="modal-content-input" id="mail_border">
         <i class="fas fa-user"></i>
         <div class="modal-content-input-in">
-          <input id="mail_input" type="text" placeholder="Email" onkeyup=(buttonOn()) onfocusout=(FreeBorderMail()) onfocus=(RedBorderMail())>
+          <input id="mail_input" type="text" placeholder="Email" onkeyup=(buttonOn()) onfocusout=(freeBorderMail()) onfocus=(redBorderMail())>
         </div>
       </div>
       <div class="modal-content-input" id="password_border">
         <i class="fas fa-lock"></i>
         <div class="modal-content-input-in">
-          <input id="password_input" type="password" placeholder="Password" onkeyup=(buttonOn()) onfocusout=(FreeBorderPassword()) onfocus=(RedBorderPassword())>
+          <input id="password_input" type="password" placeholder="Password" onkeyup=(buttonOn()) onfocusout=(freeBorderPassword()) onfocus=(redBorderPassword())>
         </div>
       </div>
       <div class="modal-content-forgot_password">
-        <button id="forgot_btn" onclick=(forgot_btn()) >Forgot password?</button>
+        <button onclick=(forgot_btn()) >Forgot password?</button>
       </div>
 
       <div class="modal-content-password_requirements" id="password_help">
       <p>Password must contain at least 8 character, including UPPER/lowercase, special symbol and numbers</p>
       </div>
       <div class="modal-content-main_login_btn" id="login_box">
-        <button id="main_login" disabled>LOGIN</button>
+        <button onclick=(console.log(13)) disabled>LOGIN</button>
       </div>
       <div class="modal-content-sign_up">
         <p>Do not have an account?</p>
-        <button id="sign_up-button_action" onclick=(sign_up_btn())>SIGNUP</button>
+        <button onclick=(sign_up_btn())>SIGNUP</button>
       </div>
       <div class="modal-content-under_button">
         <div class="modal-content-under_button-line"> <hr noshade ></div>
@@ -61,25 +61,21 @@
         <button class="modal-content-sign_up_icons-net_btn"><i class="fab fa-github"></i></button>
       </div>
     </div>
-  </div>
 
-  <div id="forgot_modal" class="modal">
-    <div class="modal-content">
-      <div class="modal-content-X">
-        <button  id="cross_forgot" class="modal-content-X-close">X</button>
+    <div id="forgot_content" class="modal-forgot-content">
+      <div class="modal-forgot-content-X">
+        <button onclick=(cross_forgot()) class="modal-content-X-close">X</button>
       </div>
       <h1>Forgot password</h1>
     </div>
-  </div>
 
-  <div id="sign_up_modal" class="modal">
-    <div class="modal-content">
-      <div class="modal-content-X">
-        <button  id="cross_sign_up" class="modal-content-X-close">X</button>
+    <div id="sign_up_content" class="modal-sign_up-content">
+      <div class="modal-sign_up-content-X">
+        <button onclick=(cross_sign_up()) class="modal-content-X-close">X</button>
       </div>
       <h1>SignUP</h1>
     </div>
-  </div>
 
+  </div>
 </body>
 </html>

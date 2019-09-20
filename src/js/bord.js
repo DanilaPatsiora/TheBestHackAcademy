@@ -1,8 +1,8 @@
-window.RedBorderPassword = () => {
+window.redBorderPassword = () => {
   let password_border = document.getElementById("password_border");
   password_border.style.borderColor="#E84A5F";
 }
-window.FreeBorderPassword = () => {
+window.freeBorderPassword = () => {
   let password_border = document.getElementById("password_border");
   let password_value =  document.getElementById("password_input").value;
   let password_regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
@@ -19,11 +19,11 @@ window.FreeBorderPassword = () => {
   }
 }
 
-const RedBorderMail = () => {
+window.redBorderMail = () => {
   let mail_border = document.getElementById("mail_border");
   mail_border.style.borderColor="#E84A5F";
 }
-const FreeBorderMail = () => {
+window.freeBorderMail = () => {
   let mail_border = document.getElementById("mail_border");
   let mail_value = document.getElementById("mail_input").value;
   let mail_help = document.getElementById("mail_help");
@@ -38,7 +38,7 @@ const FreeBorderMail = () => {
     mail_help.style.display = "block";
   }
 }
-const buttonOn = () => {
+window.buttonOn = () => {
   let mail_value = document.getElementById("mail_input").value;
   let mail_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   let password_value = document.getElementById("password_input").value;

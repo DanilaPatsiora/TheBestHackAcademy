@@ -66,7 +66,9 @@ header {
   overflow: auto;
   background-color: rgba(0,0,0,0.6);
 
-  &-content{
+  &-content,
+  &-forgot-content,
+  &-sign_up-content{
     padding:5px 5px ;
     margin: 100px auto ;
     width: 465.79px;
