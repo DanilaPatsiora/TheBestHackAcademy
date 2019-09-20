@@ -140,6 +140,7 @@ header {
         input {
           width: 100%;
           font-family: $font;
+          font-size: 14px;
           color: $whitetext;
           background: $maincolor;
           border: none;
@@ -163,6 +164,7 @@ header {
       text-align: right;
       button {
         font-family: $font;
+        font-size: 13px;
         padding-right: 0;
         background: $maincolor;
         outline: none;
@@ -221,7 +223,7 @@ header {
     &-sign_up {
       display: flex;
       align-items: center;
-      height: 20px;
+      height: 25px;
       margin-top: 10px;
       color: $whitetext;
 
@@ -231,7 +233,9 @@ header {
       }
 
       button {
+        margin-bottom: -1px;
         font-family: $font;
+        font-size: 14px;
         background: $maincolor;
         color: $redcolor;
         border-style: none;
