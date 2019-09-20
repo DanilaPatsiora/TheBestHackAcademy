@@ -11,79 +11,77 @@
 <body>
   <script src="./src/js/bord.js"></script>
   <header>
-    <button id="myBtn" class="login_btn">LOGIN</button>
+    <button id="top_login" class="top_login_btn">LOGIN</button>
   </header>
-  <div class="top_logo">
-    <img class="logo" src="/src/images/logo_text.png"></img>
+  <div class="top">
+    <img class="top-logo" src="/src/images/logo_text.png"></img>
   </div>
 
-
-  <div id="modal2" class="modal">
+  <div id="mainModal" class="modal">
     <div class="modal-content">
-      <div class="X">
-        <button  class="close">X</button>
+      <div class="modal-content-X">
+        <button id="cross_main" class="modal-content-X-close">X</button>
+      </div>
+      <img class="modal-content-main_logo"  src="/src/images/main_logo.svg">
+      <h1>LOGIN</h1>
+      <p id="mail_help" class="modal-content-help">Email is incorrect</p>
+      <div class="modal-content-input" id="mail_border">
+        <i class="fas fa-user"></i>
+        <div class="modal-content-input-in">
+          <input id="mail_input" type="text" placeholder="Email" onkeyup=(buttonOn()) onfocusout=(FreeBorderMail()) onfocus=(RedBorderMail())>
+        </div>
+      </div>
+      <div class="modal-content-input" id="password_border">
+        <i class="fas fa-lock"></i>
+        <div class="modal-content-input-in">
+          <input id="password_input" type="password" placeholder="Password" onkeyup=(buttonOn()) onfocusout=(FreeBorderPassword()) onfocus=(RedBorderPassword())>
+        </div>
+      </div>
+      <div class="modal-content-forgot_password">
+        <button id="forgot_btn" >Forgot password?</button>
+      </div>
+
+      <div class="modal-content-password_requirements" id="password_help">
+      <p>Password must contain at least 8 character, including UPPER/lowercase, special symbol and numbers</p>
+      </div>
+      <div class="modal-content-main_login_btn" id="login_box">
+        <button id="main_login" disabled>LOGIN</button>
+      </div>
+      <div class="modal-content-sign_up">
+        <p>Do not have an account?</p>
+        <button id="sign_up-button_action">SIGNUP</button>
+      </div>
+      <div class="modal-content-under_button">
+        <div class="modal-content-under_button-line"> <hr noshade ></div>
+          <p>OR</p>
+        <div class="modal-content-under_button-line"> <hr noshade ></div>
+      </div>
+      <div class="modal-content-sign_up_icons">
+        <button class="modal-content-sign_up_icons-net_btn"><i class="fab fa-google"></i></button>
+        <button class="modal-content-sign_up_icons-net_btn"><i class="fab fa-facebook"></i></button>
+        <button class="modal-content-sign_up_icons-net_btn"><i class="fab fa-github"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div id="forgot_modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-content-X">
+        <button  id="cross_forgot" class="modal-content-X-close">X</button>
       </div>
       <h1>Forgot password</h1>
     </div>
   </div>
 
-
-  <div id="modal3" class="modal">
+  <div id="sign_up_modal" class="modal">
     <div class="modal-content">
-      <div class="X">
-        <button  class="close">X</button>
+      <div class="modal-content-X">
+        <button  id="cross_sign_up" class="modal-content-X-close">X</button>
       </div>
       <h1>SignUP</h1>
     </div>
   </div>
 
-
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <div class="X">
-        <button class="close">X</button>
-      </div>
-      <img class="m_l"  src="/src/images/main_logo.svg">
-      <h1>LOGIN</h1>
-      <p id="mail_help" class="help">Email is incorrect</p>
-      <div class="modal_input" id="mail">
-        <i class="fas fa-user"></i>
-        <div class="in">
-          <input id="mail_input" type="text" placeholder="Email"  onfocusout=(oldBorderMail()) onfocus=(changeBorderMail())>
-        </div>
-      </div>
-      <div class="modal_input" id="password">
-        <i class="fas fa-lock"></i>
-        <div class="in">
-          <input id="password_input" type="password" placeholder="Password" onfocusout=(oldBorderPass()) onfocus=(changeBorderPass())>
-        </div>
-      </div>
-      <div class="forgot_pa">
-        <button id="forgotBtn" >Forgot password?</button>
-      </div>
-      <div class="pass" id="password_help">
-      <p>Password must contain at least 8 character, including UPPER/lowercase, special symbol and numbers</p>
-      </div>
-      <div class="lower" id="LOGIN_BUTTON">
-        <button id="main_login" disabled>LOGIN</button>
-      </div>
-      <div class="signup">
-        <p>Do not have an account?</p>
-        <button id="sign_up_button_action">SIGNUP</button>
-      </div>
-      <div class="under_button">
-      <div class="line"> <hr noshade ></div>
-        <p>OR</p>
-      <div class="line"> <hr noshade ></div>
-      </div>
-      <div class="sign_up_icons">
-        <button class="sign_up_net_btn"><i class="fab fa-google"></i></button>
-        <button class="sign_up_net_btn"><i class="fab fa-facebook"></i></button>
-        <button class="sign_up_net_btn"><i class="fab fa-github"></i></button>
-      </div>
-    </div>
-  </div>
   <script src="./dist/app.js"></script>
-
 </body>
 </html>

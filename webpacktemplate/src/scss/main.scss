@@ -10,66 +10,36 @@ body {
 h1{
   position: relative;
   margin: 0 0 15px 0;
-font-family: $font;
-font-style: normal;
-font-weight: bold;
-font-size: 32px;
-line-height: 44px;
-text-align: center;
-color: $redcolor;
+  font-family: $font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  color: $redcolor;
 }
 
 header {
-position: absolute;
-width: 100%;
-height: 64px;
-display: flex;
-justify-content: flex-end;
-background: $maincolor;
-}
-
-.top_logo{
-top: 8px;
-position: absolute;
-width: 310px;
-height: 48px;
-}
-.logo {
-  height: 100%;
-}
-.modal {
-  display: none;
-  position: fixed;
-  margin-top: 64px;
+  position: absolute;
   width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.6);
-}
-.modal-content{
-  padding:5px 5px ;
-  margin: 100px auto ;
-  width: 465.79px;
-  height: 650px;
-  background-color: $maincolor;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 4px;
-  border: 1px solid $maincolor;
+  height: 64px;
   display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.close {
-  color: #aaa;
-  float: right;
+  justify-content: flex-end;
   background: $maincolor;
-  border: none;
-  font-size: 15px;
-  outline: none;
-  cursor: pointer;
 }
 
-.login_btn {
+.top{
+  top: 8px;
+  position: absolute;
+  width: 310px;
+  height: 48px;
+
+  &-logo {
+    height: 100%;
+  }
+}
+
+.top_login_btn {
   background-color: $maincolor;
   border-style: none;
   height: 64px;
@@ -81,192 +51,246 @@ height: 48px;
   font-size: 18px;
   color: #fff;
   margin-right: 80px;
-}
-.login_btn:hover {
-  color: $redcolor;
-}
-.close:hover {
-  color: $redcolor;
-}
 
-.X {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-.m_l {
-  width:150px;
-}
-
-.modal_input {
-  width: 350px;
-  height: 39px;
-  border: 1px solid $formcolor;
-  border-radius: 4px;
-  margin-top: 23px;
-  display: flex;
-  aling-items: center;
-}
-.fas {
-  margin-top: 8px;
-  margin-left:8px;
-  color: white;
-  font-size: 22px;
-}
-.in {
-  width: 100%;
-  margin: 5px 0 5px 8px;
-  padding-left: 10px;
-  display: flex;
-  align-items: center;
-  border-left: 1px solid $formcolor;
-  font-family: $font;
-
-  input {
-    width: 100%;
-    font-family: $font;
-    color: $whitetext;
-    background: $maincolor;
-    border: none;
-    outline: none;
-  }
-  input:focus {
-    .modal_input {
-    border-color: $redcolor;
-    }
-  }
-}
-.forgot_pa {
-  margin-top: 3px;
-  width: 350px;
-  padding-right: 0;
-  font-size: 12px;
-  height: 20px;
-  text-align: right;
-  button {
-    font-family: $font;
-    padding-right: 0;
-    background: $maincolor;
-    outline: none;
-    border: none;
-    color: $whitetext;
-    cursor: pointer;
-  }
-  button:hover {
+  &:hover {
     color: $redcolor;
   }
 }
 
-.lower {
-  width: 350px;
+.modal {
+  display: none;
+  position: fixed;
+  margin-top: 64px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
 
-  margin-top: 60px;
-  button {
-    width: 100%;
-    font-family: $font;
-    height: 40px;
-    background: $redcolor;
-    opacity: 0.2;
-    border: none;
+  &-content{
+    padding:5px 5px ;
+    margin: 100px auto ;
+    width: 465.79px;
+    height: 650px;
+    background-color: $maincolor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
-    color:  $whitetext;
-    font-size: 20px;
-    cursor: pointer;
-    outline: none;
-  }
-  button:hover {
-  background: linear-gradient(rgba(232, 74, 95, 1.0),rgba(232, 74, 95, 0.5));
-  }
-  button:disabled{
-    &:hover {
-      background: $redcolor;
-      opacity:0.2;
+    border: 1px solid $maincolor;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &-X {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      &-close {
+        color: #aaa;
+        float: right;
+        background: $maincolor;
+        border: none;
+        font-size: 15px;
+        outline: none;
+        cursor: pointer;
+
+        &:hover {
+          color: $redcolor;
+        }
+      }
+    }
+
+    &-main_logo {
+      width:150px;
+    }
+
+    &-help {
+      color: $redcolor;
+      display: none;
+      margin-bottom: 2px;
+      margin-top: 2px;
+    }
+
+    &-input {
+      width: 350px;
+      height: 39px;
+      border: 1px solid $formcolor;
+      border-radius: 4px;
+      margin-top: 23px;
+      display: flex;
+      aling-items: center;
+
+      i {
+        margin-top: 8px;
+        margin-left:8px;
+        color: white;
+        font-size: 22px;
+      }
+
+      &-in {
+        width: 100%;
+        margin: 5px 0 5px 8px;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        border-left: 1px solid $formcolor;
+        font-family: $font;
+
+        input {
+          width: 100%;
+          font-family: $font;
+          color: $whitetext;
+          background: $maincolor;
+          border: none;
+          outline: none;
+        }
+
+        input:focus {
+          .modal_input {
+          border-color: $redcolor;
+          }
+        }
+      }
+    }
+
+    &-forgot_password {
+      margin-top: 3px;
+      width: 350px;
+      padding-right: 0;
+      font-size: 12px;
+      height: 20px;
+      text-align: right;
+      button {
+        font-family: $font;
+        padding-right: 0;
+        background: $maincolor;
+        outline: none;
+        border: none;
+        color: $whitetext;
+        cursor: pointer;
+      }
+      button:hover {
+        color: $redcolor;
+      }
+    }
+    &-password_requirements {
+      display: none;
+      justify-content: center;
+      width: 350px;
+
+      p {
+        margin-top: 12px;
+        text-align: center;
+        font-size: 14px;
+        font-family: $font;
+        color: $redcolor;
+      }
+    }
+
+    &-main_login_btn {
+      width: 350px;
+      margin-top: 60px;
+
+      button {
+        width: 100%;
+        font-family: $font;
+        height: 40px;
+        background: $redcolor;
+        opacity: 0.2;
+        border: none;
+        border-radius: 4px;
+        color:  $whitetext;
+        font-size: 20px;
+        cursor: pointer;
+        outline: none;
+      }
+
+      button:hover {
+      background: linear-gradient(rgba(232, 74, 95, 1.0),rgba(232, 74, 95, 0.5));
+      }
+
+      button:disabled{
+        &:hover {
+          background: $redcolor;
+          opacity:0.2;
+        }
+      }
+    }
+
+    &-sign_up {
+      display: flex;
+      align-items: center;
+      height: 20px;
+      margin-top: 10px;
+      color: $whitetext;
+
+      p {
+        font-size: 14px;
+        font-family: $font;
+      }
+
+      button {
+        font-family: $font;
+        background: $maincolor;
+        color: $redcolor;
+        border-style: none;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+
+    &-under_button {
+      margin-top: 25px;
+      margin-bottom: 15px;
+      width: 350px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        font-size: 22px;
+        color: $whitetext;
+        margin: 0 10px ;
+        font-family: $font;
+      }
+
+      &-line {
+        width: 140px;
+        border: none;
+
+        hr {
+          border: 1px solid;
+          border-color: $formcolor;
+        }
+      }
+    }
+
+    &-sign_up_icons {
+      margin-top: 0;
+      height: 40px;
+      width: 350px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      &-net_btn {
+        margin-top: 0;
+        font-size: 30px;
+        margin-right: 10px;
+        margin-left: 10px;
+        color: $whitetext;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        &:hover {
+          .fab {
+            color: $redcolor;
+          }
+        }
+      }
     }
   }
 }
-.under_button {
-  margin-top: 25px;
-  margin-bottom: 15px;
-  width: 350px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  p {
-    font-size: 22px;
-    color: $whitetext;
-    margin: 0 10px ;
-    font-family: $font;
-  }
-}
-.line {
-  width: 140px;
-  border: none;
 
-  hr {
-    border: 1px solid;
-    border-color: $formcolor;
-  }
-}
-
-.signup {
-  display: flex;
-  align-items: center;
-  height: 20px;
-  margin-top: 10px;
-  color: $whitetext;
-  p {
-    font-size: 14px;
-    font-family: $font;
-  }
-  button {
-    font-family: $font;
-    background: $maincolor;
-    color: $redcolor;
-    border-style: none;
-    outline: none;
-    cursor: pointer;
-  }
-}
-.sign_up_icons {
-  margin-top: 0;
-  height: 40px;
-  width: 350px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.sign_up_net_btn {
-  margin-top: 0;
-  font-size: 30px;
-  margin-right: 10px;
-  margin-left: 10px;
-  color: $whitetext;
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-.sign_up_net_btn:hover {
-  .fab {
-    color: $redcolor;
-  }
-}
-.help {
-  color: $redcolor;
-  display: none;
-  margin-bottom: 2px;
-  margin-top: 2px;
-}
-.pass {
-  display: none;
-  justify-content: center;
-  width: 350px;
-  p {
-    margin-top: 12px;
-    text-align: center;
-    font-size: 14px;
-    font-family: $font;
-    color: $redcolor;
-  }
-}

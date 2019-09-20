@@ -1,41 +1,49 @@
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[2];
-var modal2 = document.getElementById("modal2");
-var modal2 = document.getElementById("modal3");
-var span2 = document.getElementsByClassName("close")[0];
-var span3 = document.getElementsByClassName("close")[1];
-var btn2 = document.getElementById("forgotBtn");
-var btn3 = document.getElementById("sign_up_button_action");
-btn.onclick = function () {
-  modal.style.display = "block";
+let main_modal = document.getElementById("mainModal");
+let top_login_btn = document.getElementById("top_login");
+let cross_main = document.getElementById("cross_main");
+
+let forgot_modal = document.getElementById("forgot_modal");
+let cross_forgot = document.getElementById("cross_forgot");
+let forgot_btn = document.getElementById("forgot_btn");
+
+let sign_up_modal = document.getElementById("sign_up_modal");
+let cross_sign_up = document.getElementById("cross_sign_up");
+let sign_up_btn = document.getElementById("sign_up-button_action");
+
+top_login_btn.onclick = function () {
+  main_modal.style.display = "block";
 }
-btn2.onclick = function () {
-  modal.style.display = "none";
-  modal2.style.display = "block";
+
+forgot_btn.onclick = function () {
+  main_modal.style.display = "none";
+  forgot_modal.style.display = "block";
 }
-btn3.onclick = function () {
-  modal.style.display = "none";
-  modal3.style.display = "block";
+
+sign_up_btn.onclick = function () {
+  main_modal.style.display = "none";
+  sign_up_modal.style.display = "block";
 }
-span.onclick = function() {
-  modal.style.display = "none";
+
+cross_main.onclick = function() {
+  main_modal.style.display = "none";
 }
-span2.onclick = function() {
-  modal2.style.display = "none";
+
+cross_forgot.onclick = function() {
+  forgot_modal.style.display = "none";
 }
-span3.onclick = function() {
-  modal3.style.display = "none";
+
+cross_sign_up.onclick = function() {
+  sign_up_modal.style.display = "none";
 }
 
 window.onclick = function(event) {
-  if (event.target == modal){
-  modal.style.display = "none";
+  if (event.target == main_modal){
+  main_modal.style.display = "none";
   }
-  if (event.target == modal2){
-  modal2.style.display = "none";
+  if (event.target == forgot_modal){
+  forgot_modal.style.display = "none";
   }
-  if (event.target == modal3){
-  modal3.style.display = "none";
+  if (event.target == sign_up_modal){
+  sign_up_modal.style.display = "none";
   }
 }
