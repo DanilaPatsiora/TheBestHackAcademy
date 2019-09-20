@@ -25,4 +25,8 @@ window.onload = function() {
       main_modal.style.display = "none";
     }
   }
+  window.login_btn_forgot = () => {
+    forgot_content.style.display = "none";
+    main_content.style.display = "flex";
+  }
 }

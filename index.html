@@ -68,25 +68,25 @@
       </div>
     </div>
 
-    <div id="forgot_content" class="modal-forgot-content">
+    <div id="forgot_content" class="modal-forgot-content modal-forgot-content-form">
       <div class="modal-forgot-content-X">
         <button onclick=(cross_forgot()) class="modal-content-X-close">X</button>
       </div>
       <img class="modal-forgot-content-main_logo" src="/src/images/main_logo.svg">
       <h1>FORGOT PASSWORD</h1>
-      <p id="mail_help_sign_up" class="modal-sign_up-content-help">Email is incorrect</p>
+      <p id="mail_help-forgot" class="modal-forgot-content-help">Email is incorrect</p>
       <div class="modal-forgot-content-input" id="mail_border-forgot">
         <i class="fas fa-user"></i>
         <div class="modal-forgot-content-input-in">
-          <input id="mail_input_forgot" type="text" placeholder="Email" onkeyup=(buttonOn()) onfocusout=(freeBorderMail()) onfocus=(redBorderMail())>
+          <input id="mail_input_forgot" type="text" placeholder="Email" onkeyup=(buttonOnForgot()) onfocusout=(freeBorderMailForgot()) onfocus=(redBorderMailForgot())>
         </div>
       </div>
       <div class="modal-forgot-content-main_login_btn modal-forgot-content-main_login_btn-forgot" id="login_box">
-        <button onclick=(console.log(13)) disabled>Reset Password</button>
+        <button id="forgot_reset" onclick=(console.log(13)) disabled>Reset Password</button>
       </div>
-      <div class="modal-forgot-content-sign_up">
-        <p>Do not have an account?</p>
-        <button onclick=(sign_up_btn())>SIGNUP</button>
+      <div class="modal-forgot-content-sign_up modal-forgot-content-sign_up-back_to_login">
+        <p>Back to</p>
+        <button onclick=(login_btn_forgot())>LOGIN</button>
       </div>
     </div>
 
@@ -98,7 +98,6 @@
       <h1>CREATE YOUR ACCOUNT</h1>
 
     </div>
-
   </div>
 </body>
 

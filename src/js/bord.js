@@ -42,7 +42,7 @@ window.buttonOn = () => {
   let mail_value = document.getElementById("mail_input").value;
   let mail_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   let password_value = document.getElementById("password_input").value;
-  let password_regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+  let password_regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%\^&\(\)\-\+\=\|\.\_\,\*])(?=.{8,})");
   let login_button = document.getElementById("main_login");
   if (mail_regex.test(mail_value) && password_regex.test(password_value)) {
     login_button.style.opacity = "1.0";
@@ -50,5 +50,37 @@ window.buttonOn = () => {
   } else {
     login_button.style.opacity = "0.2";
     login_button.disabled = true;
+  }
+}
+
+window.redBorderMailForgot = () => {
+  let mail_border_forgot = document.getElementById("mail_border-forgot");
+  mail_border_forgot.style.borderColor = "#E84A5F";
+}
+window.freeBorderMailForgot = () => {
+  let mail_border = document.getElementById("mail_border-forgot");
+  let mail_value = document.getElementById("mail_input_forgot").value;
+  let mail_help = document.getElementById("mail_help-forgot");
+  let mail_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (mail_regex.test(mail_value) || mail_value == "") {
+    mail_border.style.borderColor = "rgba(238, 238, 238, 0.2)";
+    mail_help.style.display = "none";
+    mail_border.style.marginTop = "23px";
+  } else {
+    mail_border.style.borderColor = "red";
+    mail_border.style.marginTop = "0";
+    mail_help.style.display = "block";
+  }
+}
+window.buttonOnForgot = () => {
+  let mail_value = document.getElementById("mail_input_forgot").value;
+  let mail_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  let reset_button = document.getElementById("forgot_reset");
+  if (mail_regex.test(mail_value)) {
+    reset_button.style.opacity = "1.0";
+    reset_button.disabled = false;
+  } else {
+    reset_button.style.opacity = "0.2";
+    reset_button.disabled = true;
   }
 }
