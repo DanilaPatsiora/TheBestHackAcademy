@@ -29,4 +29,20 @@ window.onload = function() {
     forgot_content.style.display = "none";
     main_content.style.display = "flex";
   }
+  window.login_btn_sign_up = () => {
+    sign_up_content.style.display = "none";
+    main_content.style.display = "flex";
+  }
+  window.cross_main = () => {
+    main_modal.style.display = "none";
+  }
+  window.cross_forgot = () => {
+    main_modal.style.display = "none";
+  }
+  window.cross_main = () => {
+    main_modal.style.display = "none";
+  }
+  window.cross_sign_up = () => {
+    main_modal.style.display = "none";
+  }
 }

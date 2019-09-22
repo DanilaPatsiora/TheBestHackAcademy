@@ -25,7 +25,6 @@
       </div>
       <img class="modal-content-main_logo" src="/src/images/main_logo.svg">
       <h1>LOGIN</h1>
-      <p id="mail_help" class="modal-content-help">Email is incorrect</p>
       <div class="modal-content-input" id="mail_border">
         <i class="fas fa-user"></i>
         <div class="modal-content-input-in">
@@ -44,6 +43,9 @@
 
       <div class="modal-content-password_requirements" id="password_help">
         <p>Password must contain at least 8 character, including UPPER/lowercase, special symbol and numbers</p>
+      </div>
+      <div class="modal-content-mail_requirements" id="mail_help">
+        <p>Email is incorrect</p>
       </div>
       <div class="modal-content-main_login_btn" id="login_box">
         <button id="main_login" onclick=(console.log(13)) disabled>LOGIN</button>
@@ -70,18 +72,20 @@
 
     <div id="forgot_content" class="modal-forgot-content modal-forgot-content-form">
       <div class="modal-forgot-content-X">
-        <button onclick=(cross_forgot()) class="modal-content-X-close">X</button>
+        <button onclick=(cross_forgot()) class="modal-forgot-content-X-close">X</button>
       </div>
       <img class="modal-forgot-content-main_logo" src="/src/images/main_logo.svg">
       <h1>FORGOT PASSWORD</h1>
-      <p id="mail_help-forgot" class="modal-forgot-content-help">Email is incorrect</p>
       <div class="modal-forgot-content-input" id="mail_border-forgot">
         <i class="fas fa-user"></i>
         <div class="modal-forgot-content-input-in">
           <input id="mail_input_forgot" type="text" placeholder="Email" onkeyup=(buttonOnForgot()) onfocusout=(freeBorderMailForgot()) onfocus=(redBorderMailForgot())>
         </div>
       </div>
-      <div class="modal-forgot-content-main_login_btn modal-forgot-content-main_login_btn-forgot" id="login_box">
+      <div class="modal-forgot-content-mail_requirements" id="mail_help-forgot">
+        <p>Email is incorrect</p>
+      </div>
+      <div class="modal-forgot-content-main_login_btn modal-forgot-content-main_login_btn-forgot" id="reset_box">
         <button id="forgot_reset" onclick=(console.log(13)) disabled>Reset Password</button>
       </div>
       <div class="modal-forgot-content-sign_up modal-forgot-content-sign_up-back_to_login">
@@ -92,10 +96,44 @@
 
     <div id="sign_up_content" class="modal-sign_up-content">
       <div class="modal-sign_up-content-X">
-        <button onclick=(cross_sign_up()) class="modal-content-X-close">X</button>
+        <button onclick=(cross_sign_up()) class="modal-forgot-content-X-close">X</button>
       </div>
       <img class="modal-sign_up-content-main_logo" src="/src/images/main_logo.svg">
       <h1>CREATE YOUR ACCOUNT</h1>
+      <div class="modal-sign_up-content-input" id="mail_border-sign_up">
+        <i class="fas fa-user"></i>
+        <div class="modal-sign_up-content-input-in">
+          <input id="mail_input_sign_up" type="text" placeholder="Email" onkeyup=(buttonOn()) onfocusout=(freeBorderMailSignUp()) onfocus=(redBorderMailSignUp())>
+        </div>
+      </div>
+      <div class="modal-sign_up-content-input" id="password_border_sign_up">
+        <i class="fas fa-lock"></i>
+        <div class="modal-sign_up-content-input-in">
+          <input id="password_input_sign_up" type="password" placeholder="Password" onkeyup=(buttonOn()) onfocusout=(freeBorderPasswordSignUp()) onfocus=(redBorderPasswordSignUp())>
+        </div>
+      </div>
+      <div class="modal-sign_up-content-input" id="confirm_password_border_sign_up">
+        <i class="fas fa-lock"></i>
+        <div class="modal-sign_up-content-input-in">
+          <input id="confirm_password_input_sign_up" type="password" placeholder="Confirm password" onkeyup=(buttonOn()) onfocusout=(freeBorderPassword()) onfocus=(redBorderPassword())>
+        </div>
+      </div>
+      <div class="modal-sign_up-content-mail_requirements" id="mail_help_sign_up">
+        <p>Email is incorrect</p>
+      </div>
+      <div class="modal-sign_up-content-password_requirements" id="password_help_sign_up">
+        <p>Password must contain at least 8 character, including UPPER/lowercase, special symbol and numbers</p>
+      </div>
+      <div class="modal-sign_up-content-main_login_btn modal-sign_up-content-main_login_btn-forgot" id="create_box">
+        <button id="sign_up_create" onclick=(console.log(13)) disabled>Create Account</button>
+      </div>
+      <div class="modal-sign_up-content-sign_up modal-sign_up-content-sign_up-info">
+        <p>By creating an account, I accept Hackacademy <button onclick=(login_btn_forgot())>Terms of Use</button>and<button onclick=(login_btn_forgot())>Privacy Policy</button></p>
+      </div>
+      <div class="modal-sign_up-content-sign_up modal-sign_up-content-sign_up-back_to_login">
+        <p>Back to</p>
+        <button onclick=(login_btn_sign_up())>LOGIN</button>
+      </div>
 
     </div>
   </div>

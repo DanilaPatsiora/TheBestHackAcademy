@@ -7,18 +7,25 @@ window.freeBorderPassword = () => {
   let password_value = document.getElementById("password_input").value;
   let password_regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
   let password_help = document.getElementById("password_help");
+  let mail_help = document.getElementById("mail_help");
   let login_box = document.getElementById("login_box");
+
   if (password_regex.test(password_value) || password_value == "") {
     password_border.style.borderColor = "rgba(238, 238, 238, 0.2)";
     password_help.style.display = "none";
-    login_box.style.marginTop = "60px";
+
+    if (mail_help.style.display == "none") {
+      login_box.style.marginTop = "60px";
+    }
   } else {
     password_border.style.borderColor = "red";
-    password_help.style.display = "flex";
-    login_box.style.marginTop = "0";
+
+    if (mail_help.style.display == "none" || mail_help.style.display == "") {
+      password_help.style.display = "flex";
+      login_box.style.marginTop = "0";
+    }
   }
 }
-
 window.redBorderMail = () => {
   let mail_border = document.getElementById("mail_border");
   mail_border.style.borderColor = "#E84A5F";
@@ -27,15 +34,20 @@ window.freeBorderMail = () => {
   let mail_border = document.getElementById("mail_border");
   let mail_value = document.getElementById("mail_input").value;
   let mail_help = document.getElementById("mail_help");
+  let password_help = document.getElementById("password_help");
   let mail_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  let login_box = document.getElementById("login_box");
   if (mail_regex.test(mail_value) || mail_value == "") {
     mail_border.style.borderColor = "rgba(238, 238, 238, 0.2)";
     mail_help.style.display = "none";
-    mail_border.style.marginTop = "23px";
+    login_box.style.marginTop = "60px";
+    window.freeBorderPassword();
   } else {
+    password_help.style.display = "none";
     mail_border.style.borderColor = "red";
-    mail_border.style.marginTop = "0";
     mail_help.style.display = "block";
+    login_box.style.marginTop = "0";
+
   }
 }
 window.buttonOn = () => {
@@ -44,6 +56,7 @@ window.buttonOn = () => {
   let password_value = document.getElementById("password_input").value;
   let password_regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%\^&\(\)\-\+\=\|\.\_\,\*])(?=.{8,})");
   let login_button = document.getElementById("main_login");
+
   if (mail_regex.test(mail_value) && password_regex.test(password_value)) {
     login_button.style.opacity = "1.0";
     login_button.disabled = false;
@@ -62,20 +75,25 @@ window.freeBorderMailForgot = () => {
   let mail_value = document.getElementById("mail_input_forgot").value;
   let mail_help = document.getElementById("mail_help-forgot");
   let mail_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  let login_box = document.getElementById("reset_box");
+
   if (mail_regex.test(mail_value) || mail_value == "") {
     mail_border.style.borderColor = "rgba(238, 238, 238, 0.2)";
     mail_help.style.display = "none";
-    mail_border.style.marginTop = "23px";
+    login_box.style.marginTop = "60px";
   } else {
+    password_help.style.display = "none";
     mail_border.style.borderColor = "red";
-    mail_border.style.marginTop = "0";
     mail_help.style.display = "block";
+    login_box.style.marginTop = "0";
   }
 }
+
 window.buttonOnForgot = () => {
   let mail_value = document.getElementById("mail_input_forgot").value;
   let mail_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   let reset_button = document.getElementById("forgot_reset");
+
   if (mail_regex.test(mail_value)) {
     reset_button.style.opacity = "1.0";
     reset_button.disabled = false;
@@ -84,3 +102,78 @@ window.buttonOnForgot = () => {
     reset_button.disabled = true;
   }
 }
+window.redBorderMailSignUp = () => {
+  let mail_border_forgot = document.getElementById("mail_border-sign_up");
+  mail_border_forgot.style.borderColor = "#E84A5F";
+}
+window.freeBorderMailSignUp = () => {
+  let mail_border = document.getElementById("mail_border-sign_up");
+  let mail_value = document.getElementById("mail_input_sign_up").value;
+  let mail_help = document.getElementById("mail_help_sign_up");
+  let password_help = document.getElementById("password_help_sign_up");
+  let mail_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  let login_box = document.getElementById("create_box");
+
+  if (mail_regex.test(mail_value) || mail_value == "") {
+    mail_border.style.borderColor = "rgba(238, 238, 238, 0.2)";
+    mail_help.style.display = "none";
+    login_box.style.marginTop = "60px";
+    window.freeBorderPasswordSignUp();
+  } else {
+    password_help.style.display = "none";
+    mail_border.style.borderColor = "red";
+    mail_help.style.display = "block";
+    login_box.style.marginTop = "0";
+  }
+}
+window.redBorderPasswordSignUp = () => {
+  let password_border = document.getElementById("password_border_sign_up");
+  password_border.style.borderColor = "#E84A5F";
+}
+window.freeBorderPasswordSignUp = () => {
+  let password_border = document.getElementById("password_border_sign_up");
+  let password_value = document.getElementById("password_input_sign_up").value;
+  let password_regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+  let password_help = document.getElementById("password_help_sign_up");
+  let mail_help = document.getElementById("mail_help_sign_up");
+  let login_box = document.getElementById("create_box");
+
+  if (password_regex.test(password_value) || password_value == "") {
+      password_border.style.borderColor = "rgba(238, 238, 238, 0.2)";
+      password_help.style.display = "none";
+
+      if (mail_help.style.display == "none") {
+        login_box.style.marginTop = "60px";
+      }
+    } else {
+      password_border.style.borderColor = "red";
+      if (mail_help.style.display == "none" || mail_help.style.display == "") {
+        password_help.style.display = "flex";
+        login_box.style.marginTop = "0";
+      }
+    }
+}
+// window.freeBorderPassword = () => {
+//   let password_border = document.getElementById("password_border");
+//   let password_value = document.getElementById("password_input").value;
+//   let password_regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+//   let password_help = document.getElementById("password_help");
+//   let mail_help = document.getElementById("mail_help");
+//   let login_box = document.getElementById("login_box");
+//
+//   if (password_regex.test(password_value) || password_value == "") {
+//     password_border.style.borderColor = "rgba(238, 238, 238, 0.2)";
+//     password_help.style.display = "none";
+//
+//     if (mail_help.style.display == "none") {
+//       login_box.style.marginTop = "60px";
+//     }
+//   } else {
+//     password_border.style.borderColor = "red";
+//
+//     if (mail_help.style.display == "none") {
+//       password_help.style.display = "flex";
+//       login_box.style.marginTop = "0";
+//     }
+//   }
+// }

@@ -26,6 +26,10 @@ header {
   display: flex;
   justify-content: flex-end;
   background: $maincolor;
+
+  button {
+    outline: none;
+  }
 }
 
 .top{
@@ -72,7 +76,7 @@ header {
     padding:5px 5px ;
     margin: 100px auto ;
     width: 465.79px;
-    height: 650px;
+    height: 670px;
     background-color: $maincolor;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
@@ -82,11 +86,12 @@ header {
     flex-direction: column;
 
     &-form {
-      height: 430px;
+      height: 468px;
     }
     h1 {
       margin-top: 10px;
       font-size: 26px;
+      margin-bottom: 25px;
     }
 
     &-X {
@@ -127,7 +132,7 @@ header {
       height: 39px;
       border: 1px solid $formcolor;
       border-radius: 4px;
-      margin-top: 23px;
+      margin-top: 29px;
       display: flex;
       aling-items: center;
 
@@ -146,6 +151,7 @@ header {
         width: 100%;
         margin: 5px 0 5px 8px;
         padding-left: 10px;
+        height: 29px;
         display: flex;
         align-items: center;
         border-left: 1px solid $formcolor;
@@ -178,7 +184,7 @@ header {
       text-align: right;
       button {
         font-family: $font;
-        font-size: 13px;
+        font-size: 14px;
         padding-right: 0;
         background: $maincolor;
         outline: none;
@@ -190,6 +196,20 @@ header {
         color: $redcolor;
       }
     }
+    &-mail_requirements {
+      display: none;
+      justify-content: center;
+      width: 350px;
+
+      p {
+        margin-top: 16px;
+        text-align: center;
+        font-size: 16px;
+        font-family: $font;
+        color: $redcolor;
+        margin-bottom: 26px;
+      }
+    }
     &-password_requirements {
       display: none;
       justify-content: center;
@@ -198,19 +218,23 @@ header {
       p {
         margin-top: 12px;
         text-align: center;
-        font-size: 14px;
+        font-size: 16px;
         font-family: $font;
         color: $redcolor;
+        margin-bottom: 12px;
+      }
+
+      &-special {
+        p {
+          margin-top: 6px;
+          margin-bottom: 5px;
+        }
       }
     }
 
     &-main_login_btn {
       width: 350px;
       margin-top: 60px;
-
-      &-forgot {
-        margin-top: 28px;
-      }
 
       button {
         width: 100%;
@@ -246,8 +270,24 @@ header {
       color: $whitetext;
 
       &-back_to_login{
-        margin-top: 28px;
         height: 18px;
+        button {
+          padding-left: 4px;
+          padding-right: 0;
+        }
+      }
+
+      &-info{
+        margin-top: 15px;
+        height: 30px;
+        width: 284px;
+        text-align: center;
+        margin-bottom: 30px;
+
+        button {
+          padding-right: 4px;
+          padding-left: 4px;
+        }
       }
 
       p {
