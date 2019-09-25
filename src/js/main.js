@@ -45,4 +45,5 @@ window.onload = function() {
   window.cross_sign_up = () => {
     main_modal.style.display = "none";
   }
+
 }

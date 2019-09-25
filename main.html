@@ -28,13 +28,13 @@
       <div class="modal-content-input" id="mail_border">
         <i class="fas fa-user"></i>
         <div class="modal-content-input-in">
-          <input id="mail_input" type="text" placeholder="Email" onkeyup=(buttonOn()) onfocusout=(freeBorderMail()) onfocus=(redBorderMail())>
+          <input id="mail_input" type="text" placeholder="Email" onkeyup=(buttonOn()) onkeypress=(enter_subm_login(event))  onfocusout=(freeBorderMail()) onfocus=(redBorderMail())>
         </div>
       </div>
       <div class="modal-content-input" id="password_border">
         <i class="fas fa-lock"></i>
         <div class="modal-content-input-in">
-          <input id="password_input" type="password" placeholder="Password" onkeyup=(buttonOn()) onfocusout=(freeBorderPassword()) onfocus=(redBorderPassword())>
+          <input id="password_input" type="password" placeholder="Password" onkeyup=(buttonOn()) onkeypress=(enter_subm_login(event)) onfocusout=(freeBorderPassword()) onfocus=(redBorderPassword())>
         </div>
       </div>
       <div class="modal-content-forgot_password">
@@ -79,7 +79,7 @@
       <div class="modal-forgot-content-input" id="mail_border-forgot">
         <i class="fas fa-user"></i>
         <div class="modal-forgot-content-input-in">
-          <input id="mail_input_forgot" type="text" placeholder="Email" onkeyup=(buttonOnForgot()) onfocusout=(freeBorderMailForgot()) onfocus=(redBorderMailForgot())>
+          <input id="mail_input_forgot" type="text" placeholder="Email" onkeypress=(enter_subm_forgot(event)) onkeyup=(buttonOnForgot()) onfocusout=(freeBorderMailForgot()) onfocus=(redBorderMailForgot())>
         </div>
       </div>
       <div class="modal-forgot-content-mail_requirements" id="mail_help-forgot">
@@ -103,19 +103,19 @@
       <div class="modal-sign_up-content-input" id="mail_border-sign_up">
         <i class="fas fa-user"></i>
         <div class="modal-sign_up-content-input-in">
-          <input id="mail_input_sign_up" type="text" placeholder="Email" onkeyup=(buttonOn()) onfocusout=(freeBorderMailSignUp()) onfocus=(redBorderMailSignUp())>
+          <input id="mail_input_sign_up" type="text" placeholder="Email" onkeypress=(enter_subm_sign_up(event)) onkeyup=(buttonOnSignUp()) onfocusout=(freeBorderMailSignUp()) onfocus=(redBorderMailSignUp())>
         </div>
       </div>
       <div class="modal-sign_up-content-input" id="password_border_sign_up">
         <i class="fas fa-lock"></i>
         <div class="modal-sign_up-content-input-in">
-          <input id="password_input_sign_up" type="password" placeholder="Password" onkeyup=(buttonOn()) onfocusout=(freeBorderPasswordSignUp()) onfocus=(redBorderPasswordSignUp())>
+          <input id="password_input_sign_up" type="password" placeholder="Password" onkeypress=(enter_subm_sign_up(event)) onkeyup=(buttonOnSignUp()) onfocusout=(freeBorderPasswordSignUp()) onfocus=(redBorderPasswordSignUp())>
         </div>
       </div>
       <div class="modal-sign_up-content-input" id="confirm_password_border_sign_up">
         <i class="fas fa-lock"></i>
         <div class="modal-sign_up-content-input-in">
-          <input id="confirm_password_input_sign_up" type="password" placeholder="Confirm password" onkeyup=(buttonOn()) onfocusout=(freeBorderPassword()) onfocus=(redBorderPassword())>
+          <input id="confirm_password_input_sign_up" type="password" placeholder="Confirm password" onkeypress=(enter_subm_sign_up(event)) onkeyup=(buttonOnSignUp()) onfocusout=(freeBorderConfirmSignUp()) onfocus=(redBorderConfirmSignUp())>
         </div>
       </div>
       <div class="modal-sign_up-content-mail_requirements" id="mail_help_sign_up">
@@ -124,8 +124,11 @@
       <div class="modal-sign_up-content-password_requirements" id="password_help_sign_up">
         <p>Password must contain at least 8 character, including UPPER/lowercase, special symbol and numbers</p>
       </div>
+      <div class="modal-sign_up-content-confirm_requirements" id="confirm_help_sign_up">
+        <p>Passwords don't match</p>
+      </div>
       <div class="modal-sign_up-content-main_login_btn modal-sign_up-content-main_login_btn-forgot" id="create_box">
-        <button id="sign_up_create" onclick=(console.log(13)) disabled>Create Account</button>
+        <button id="sign_up_create" onclick=(console.log("created")) disabled>Create Account</button>
       </div>
       <div class="modal-sign_up-content-sign_up modal-sign_up-content-sign_up-info">
         <p>By creating an account, I accept Hackacademy <button onclick=(login_btn_forgot())>Terms of Use</button>and<button onclick=(login_btn_forgot())>Privacy Policy</button></p>

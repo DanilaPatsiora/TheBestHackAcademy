@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
 $maincolor: #2A363B;
 $redcolor: #E84A5F;
 $formcolor: rgba(238, 238, 238, 0.2);
@@ -60,7 +61,6 @@ header {
     color: $redcolor;
   }
 }
-
 .modal {
   display: none;
   position: fixed;
@@ -70,6 +70,12 @@ header {
   overflow: auto;
   background-color: rgba(0,0,0,0.6);
 
+  &-special{
+    display:block;
+    background-color: #fff;
+  }
+
+  &-reset,
   &-content,
   &-forgot-content,
   &-sign_up-content{
@@ -85,6 +91,10 @@ header {
     align-items: center;
     flex-direction: column;
 
+    &-special {
+      padding-top: 15px;
+      height: 480px;
+    }
     &-form {
       height: 468px;
     }
@@ -196,18 +206,34 @@ header {
         color: $redcolor;
       }
     }
+
+    &-confirm_requirements {
+      display: none;
+      justify-content: center;
+      width: 350px;
+
+      p {
+        margin-top: 21px;
+        text-align: center;
+        font-size: 14px;
+        font-family: $font;
+        color: $redcolor;
+        margin-bottom: 20px;
+      }
+    }
+
     &-mail_requirements {
       display: none;
       justify-content: center;
       width: 350px;
 
       p {
-        margin-top: 16px;
+        margin-top: 21px;
         text-align: center;
-        font-size: 16px;
+        font-size: 14px;
         font-family: $font;
         color: $redcolor;
-        margin-bottom: 26px;
+        margin-bottom: 20px;
       }
     }
     &-password_requirements {
@@ -218,10 +244,10 @@ header {
       p {
         margin-top: 12px;
         text-align: center;
-        font-size: 16px;
+        font-size: 14px;
         font-family: $font;
         color: $redcolor;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
       }
 
       &-special {

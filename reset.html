@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <title>Separated</title>
+  <script src="bundle.js"></script>
+</head>
+
+<body>
+  <header>
+  </header>
+  <div class="top">
+    <img class="top-logo" src="/src/images/logo_text.png"></img>
+  </div>
+  <div class="modal modal-special">
+    <div class="modal-sign_up-content modal-sign_up-content-special">
+      <img class="modal-sign_up-content-main_logo" src="/src/images/main_logo.svg">
+      <h1>Reset password</h1>
+      <div class="modal-reset-input" id="password_border_reset">
+        <i class="fas fa-lock"></i>
+        <div class="modal-reset-input-in">
+          <input id="password_input_reset" type="password" placeholder="Password" onkeypress=(enter_subm_reset(event)) onkeyup=(buttonOnReset()) onfocusout=(freeBorderPasswordReset()) onfocus=(redBorderPasswordReset())>
+        </div>
+      </div>
+      <div class="modal-reset-input" id="confirm_password_border_reset">
+        <i class="fas fa-lock"></i>
+        <div class="modal-reset-input-in">
+          <input id="confirm_password_input_reset" type="password" placeholder="Confirm password" onkeypress=(enter_subm_reset(event)) onkeyup=(buttonOnReset()) onfocusout=(freeBorderConfirmReset()) onfocus=(redBorderConfirmReset())>
+        </div>
+      </div>
+      <div class="modal-reset-password_requirements" id="password_help_reset">
+        <p>Password must contain at least 8 character, including UPPER/lowercase, special symbol and numbers</p>
+      </div>
+      <div class="modal-reset-confirm_requirements" id="confirm_help_reset">
+        <p>Passwords don't match</p>
+      </div>
+      <div class="modal-reset-main_login_btn" id="reset_box">
+        <button id="reset_password" onclick=(console.log("reset")) disabled>Reset Password</button>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
