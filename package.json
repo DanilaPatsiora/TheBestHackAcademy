@@ -4,7 +4,7 @@
   "description": "My template",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
+    "start": "webpack-dev-server --host 0.0.0.0 --open --mode development",
     "build": "webpack --mode production"
   },
   "browserslist": [
@@ -14,8 +14,8 @@
   "author": "Danila Patsora",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
     "autoprefixer": "^9.6.1",
     "babel-loader": "^8.0.6",
     "css-mqpacker": "^7.0.0",
@@ -32,7 +32,6 @@
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.6.0",
     "css-loader": "^3.2.0",
-    "save-dev": "^2.0.0",
     "style-loader": "^1.0.0",
     "vue": "^2.6.10"
   }
